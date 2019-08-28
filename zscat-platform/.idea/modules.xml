@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mall-admin/mall-admin.iml" filepath="$PROJECT_DIR$/mall-admin/mall-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-api/mall-api.iml" filepath="$PROJECT_DIR$/mall-api/mall-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-common/mall-common.iml" filepath="$PROJECT_DIR$/mall-common/mall-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-core/mall-core.iml" filepath="$PROJECT_DIR$/mall-core/mall-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-portal/mall-portal.iml" filepath="$PROJECT_DIR$/mall-portal/mall-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oms-api/oms-api.iml" filepath="$PROJECT_DIR$/oms-api/oms-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oms-service/oms-service.iml" filepath="$PROJECT_DIR$/oms-service/oms-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pms-api/pms-api.iml" filepath="$PROJECT_DIR$/pms-api/pms-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pms-service/pms-service.iml" filepath="$PROJECT_DIR$/pms-service/pms-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ums-api/ums-api.iml" filepath="$PROJECT_DIR$/ums-api/ums-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ums-service/ums-service.iml" filepath="$PROJECT_DIR$/ums-service/ums-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zscat-platform.iml" filepath="$PROJECT_DIR$/zscat-platform.iml" />
+    </modules>
+  </component>
+</project>
