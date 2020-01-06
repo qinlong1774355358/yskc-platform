@@ -117,6 +117,7 @@ public class JwtTokenUtil {
         Map<String, Object> claims = new HashMap<>();
         claims.put(CLAIM_KEY_USERNAME, userDetails.getUsername());
         claims.put(CLAIM_KEY_CREATED, new Date());
+        System.out.println("3333333333333333333333333"+claims);
         return generateToken(claims);
     }
 
@@ -124,6 +125,7 @@ public class JwtTokenUtil {
      * 判断token是否可以被刷新
      */
     public boolean canRefresh(String token) {
+        System.out.println("dddddddddddddddddd");
         return !isTokenExpired(token);
     }
 
@@ -131,6 +133,7 @@ public class JwtTokenUtil {
      * 刷新token
      */
     public String refreshToken(String token) {
+        System.out.println("ccccccccccccccccccccc");
         Claims claims = getClaimsFromToken(token);
         claims.put(CLAIM_KEY_CREATED, new Date());
         return generateToken(claims);

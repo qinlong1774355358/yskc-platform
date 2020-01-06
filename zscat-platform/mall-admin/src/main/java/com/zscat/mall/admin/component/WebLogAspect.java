@@ -61,6 +61,7 @@ public class WebLogAspect {
 
     @Around("webLog()")
     public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable {
+        System.out.println("8888888888888888888888888888888");
         //获取当前请求对象
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
@@ -99,6 +100,7 @@ public class WebLogAspect {
      * 根据方法和传入的参数获取请求参数
      */
     private Object getParameter(Method method, Object[] args) {
+        System.out.println("9999999999999999999999");
         List<Object> argList = new ArrayList<>();
         Parameter[] parameters = method.getParameters();
         for (int i = 0; i < parameters.length; i++) {

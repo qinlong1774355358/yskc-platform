@@ -23,6 +23,7 @@ public class BindingResultAspect {
 
     @Around("BindingResult()")
     public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable {
+        System.out.println("44444444444444444444444444");
         Object[] args = joinPoint.getArgs();
         for (Object arg : args) {
             if (arg instanceof BindingResult) {
