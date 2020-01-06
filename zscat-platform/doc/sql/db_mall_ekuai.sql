@@ -4,7 +4,7 @@ Navicat MySQL Data Transfer
 Source Server         : admin
 Source Server Version : 50556
 Source Host           : localhost:3306
-Source Database       : db_mall_ekuai
+Source Database       : db_mall_ekuai?serverTimezone=UTC
 
 Target Server Type    : MYSQL
 Target Server Version : 50556

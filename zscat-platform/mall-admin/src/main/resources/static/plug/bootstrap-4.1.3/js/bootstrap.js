@@ -2682,7 +2682,7 @@
           var tip = this.getTipElement();
           var tipId = Util.getUID(this.constructor.NAME);
           tip.setAttribute('id', tipId);
-          this.element.setAttribute('aria-describedby', tipId);
+          this.element.setAttribute('aria-detailsdby', tipId);
           this.setContent();
 
           if (this.config.animation) {
@@ -2772,7 +2772,7 @@
 
           _this2._cleanTipClass();
 
-          _this2.element.removeAttribute('aria-describedby');
+          _this2.element.removeAttribute('aria-detailsdby');
 
           $$$1(_this2.element).trigger(_this2.constructor.Event.HIDDEN);
 

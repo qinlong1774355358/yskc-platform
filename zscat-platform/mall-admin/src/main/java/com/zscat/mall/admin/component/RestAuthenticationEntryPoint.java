@@ -20,6 +20,7 @@ import com.zscat.common.util.JsonUtil;
 public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
+        System.out.println("66666666666666666666666666");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
         response.getWriter().println(JsonUtil.objectToJson(new CommonResult().unauthorized(authException.getMessage())));

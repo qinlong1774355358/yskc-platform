@@ -11,15 +11,15 @@
     <modules>
         <module>mall-common</module>
         <module>mall-core</module>
-        <module>oms-api</module>
-        <module>ums-api</module>
+        <!--<module>oms-api</module>-->
+<!--        <module>ums-api</module>-->
         <module>pms-api</module>
-        <module>oms-service</module>
-        <module>ums-service</module>
-        <module>pms-service</module>         
-        <module>mall-portal</module>
+        <!--<module>oms-service</module>-->
+<!--        <module>ums-service</module>-->
+        <module>pms-service</module>
+<!--        <module>mall-portal</module>-->
         <module>mall-admin</module>
-        <module>mall-api</module>
+<!--        <module>mall-api</module>-->
     </modules>
 
     <name>zscat-platform</name> 

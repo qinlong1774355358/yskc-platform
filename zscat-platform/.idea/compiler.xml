@@ -7,31 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mall-admin" />
-        <module name="mall-api" />
-        <module name="mall-common" />
         <module name="mall-core" />
-        <module name="mall-portal" />
-        <module name="oms-api" />
-        <module name="oms-service" />
         <module name="pms-api" />
         <module name="pms-service" />
-        <module name="ums-api" />
-        <module name="ums-service" />
+        <module name="mall-common" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="mall-admin" target="1.8" />
-      <module name="mall-api" target="1.8" />
-      <module name="mall-common" target="1.8" />
-      <module name="mall-core" target="1.8" />
-      <module name="mall-portal" target="1.8" />
-      <module name="oms-api" target="1.8" />
-      <module name="oms-service" target="1.8" />
-      <module name="pms-api" target="1.8" />
-      <module name="pms-service" target="1.8" />
-      <module name="ums-api" target="1.8" />
-      <module name="ums-service" target="1.8" />
-      <module name="zscat-platform" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
