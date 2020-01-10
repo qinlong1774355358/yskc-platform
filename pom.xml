@@ -19,7 +19,8 @@
         <module>pms-service</module>
 <!--        <module>mall-portal</module>-->
         <module>mall-admin</module>
-<!--        <module>mall-api</module>-->
+        <module>mall-menu-control</module>
+        <!--        <module>mall-api</module>-->
     </modules>
 
     <name>zscat-platform</name> 

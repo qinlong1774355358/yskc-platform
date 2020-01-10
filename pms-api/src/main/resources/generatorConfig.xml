@@ -12,7 +12,7 @@
             <property name="suppressAllComments" value="true" />
      </commentGenerator>
        <!--数据库配置-->
-    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/db_mall_ekuai?serverTimezone=UTC" driverClass="com.mysql.jdbc.Driver" password="123456" userId="root" />
+    <jdbcConnection connectionURL="jdbc:mysql://114.246.8.55:3306/db_mall_ekuai?serverTimezone=UTC" driverClass="com.mysql.jdbc.Driver" password="p@ssW0RD" userId="root" />
     <!-- 模型生成包名-->
     <javaModelGenerator targetPackage="com.yskc.pms.entity" targetProject="src/main/java" />
    <!-- mybatis的映射.xml-->
@@ -30,7 +30,10 @@
 <!--    <table tableName="pms_history_push" domainObjectName="PmsHistoryPush"/>-->
 <!--    <table tableName="pms_live_record" domainObjectName="PmsLiveRecord"/>-->
 <!--    <table tableName="pms_recorded_record" domainObjectName="PmsRecordedRecord"/>-->
-    <table tableName="pms_breaking_records" domainObjectName="PmsBreakingRecords"/>
-    <table tableName="pms_demand_records" domainObjectName="PmsDemandRecords"/>
+ <!--   <table tableName="pms_breaking_records" domainObjectName="PmsBreakingRecords"/>
+    <table tableName="pms_demand_records" domainObjectName="PmsDemandRecords"/>-->
+    <table tableName="pms_connection_area" domainObjectName="PmsConnectionArea"/>
+
+
   </context>
 </generatorConfiguration>
