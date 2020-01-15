@@ -10,6 +10,8 @@ public class PmsConnectionArea implements Serializable {
 
     private Byte illegal;
 
+    private Integer warnCount;
+
     private String illegalContext;
 
     private Integer illegalCount;
@@ -46,6 +48,14 @@ public class PmsConnectionArea implements Serializable {
 
     public void setIllegal(Byte illegal) {
         this.illegal = illegal;
+    }
+
+    public Integer getWarnCount() {
+        return warnCount;
+    }
+
+    public void setWarnCount(Integer warnCount) {
+        this.warnCount = warnCount;
     }
 
     public String getIllegalContext() {
@@ -105,6 +115,7 @@ public class PmsConnectionArea implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", userAccount=").append(userAccount);
         sb.append(", illegal=").append(illegal);
+        sb.append(", warnCount=").append(warnCount);
         sb.append(", illegalContext=").append(illegalContext);
         sb.append(", illegalCount=").append(illegalCount);
         sb.append(", operation=").append(operation);

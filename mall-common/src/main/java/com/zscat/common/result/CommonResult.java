@@ -46,6 +46,8 @@ public class CommonResult {
         this.data = data;
         return this;
     }
+
+
   /**
      * 返回分页成功数据
      */

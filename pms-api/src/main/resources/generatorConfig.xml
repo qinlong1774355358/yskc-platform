@@ -32,7 +32,9 @@
 <!--    <table tableName="pms_recorded_record" domainObjectName="PmsRecordedRecord"/>-->
  <!--   <table tableName="pms_breaking_records" domainObjectName="PmsBreakingRecords"/>
     <table tableName="pms_demand_records" domainObjectName="PmsDemandRecords"/>-->
-    <table tableName="pms_connection_area" domainObjectName="PmsConnectionArea"/>
+ <!--   <table tableName="pms_connection_area" domainObjectName="PmsConnectionArea"/>-->
+ <!--   <table tableName="pms_trade_area" domainObjectName="PmsTradeArea"/>-->
+    <table tableName="pms_friend_circle" domainObjectName="PmsFriendCircle"/>
 
 
   </context>

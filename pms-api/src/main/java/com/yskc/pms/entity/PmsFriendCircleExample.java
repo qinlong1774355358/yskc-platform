@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class PmsConnectionAreaExample  extends PageResultUtils {
+public class PmsFriendCircleExample extends PageResultUtils {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public PmsConnectionAreaExample() {
+    public PmsFriendCircleExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -237,383 +237,193 @@ public class PmsConnectionAreaExample  extends PageResultUtils {
             return (Criteria) this;
         }
 
-        public Criteria andIllegalIsNull() {
-            addCriterion("illegal is null");
+        public Criteria andPublishTypeIsNull() {
+            addCriterion("publish_type is null");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalIsNotNull() {
-            addCriterion("illegal is not null");
+        public Criteria andPublishTypeIsNotNull() {
+            addCriterion("publish_type is not null");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalEqualTo(Byte value) {
-            addCriterion("illegal =", value, "illegal");
+        public Criteria andPublishTypeEqualTo(Integer value) {
+            addCriterion("publish_type =", value, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalNotEqualTo(Byte value) {
-            addCriterion("illegal <>", value, "illegal");
+        public Criteria andPublishTypeNotEqualTo(Integer value) {
+            addCriterion("publish_type <>", value, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalGreaterThan(Byte value) {
-            addCriterion("illegal >", value, "illegal");
+        public Criteria andPublishTypeGreaterThan(Integer value) {
+            addCriterion("publish_type >", value, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalGreaterThanOrEqualTo(Byte value) {
-            addCriterion("illegal >=", value, "illegal");
+        public Criteria andPublishTypeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("publish_type >=", value, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalLessThan(Byte value) {
-            addCriterion("illegal <", value, "illegal");
+        public Criteria andPublishTypeLessThan(Integer value) {
+            addCriterion("publish_type <", value, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalLessThanOrEqualTo(Byte value) {
-            addCriterion("illegal <=", value, "illegal");
+        public Criteria andPublishTypeLessThanOrEqualTo(Integer value) {
+            addCriterion("publish_type <=", value, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalIn(List<Byte> values) {
-            addCriterion("illegal in", values, "illegal");
+        public Criteria andPublishTypeIn(List<Integer> values) {
+            addCriterion("publish_type in", values, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalNotIn(List<Byte> values) {
-            addCriterion("illegal not in", values, "illegal");
+        public Criteria andPublishTypeNotIn(List<Integer> values) {
+            addCriterion("publish_type not in", values, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalBetween(Byte value1, Byte value2) {
-            addCriterion("illegal between", value1, value2, "illegal");
+        public Criteria andPublishTypeBetween(Integer value1, Integer value2) {
+            addCriterion("publish_type between", value1, value2, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalNotBetween(Byte value1, Byte value2) {
-            addCriterion("illegal not between", value1, value2, "illegal");
+        public Criteria andPublishTypeNotBetween(Integer value1, Integer value2) {
+            addCriterion("publish_type not between", value1, value2, "publishType");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountIsNull() {
-            addCriterion("warn_count is null");
+        public Criteria andAdStatusIsNull() {
+            addCriterion("ad_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountIsNotNull() {
-            addCriterion("warn_count is not null");
+        public Criteria andAdStatusIsNotNull() {
+            addCriterion("ad_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountEqualTo(Integer value) {
-            addCriterion("warn_count =", value, "warnCount");
+        public Criteria andAdStatusEqualTo(Integer value) {
+            addCriterion("ad_status =", value, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountNotEqualTo(Integer value) {
-            addCriterion("warn_count <>", value, "warnCount");
+        public Criteria andAdStatusNotEqualTo(Integer value) {
+            addCriterion("ad_status <>", value, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountGreaterThan(Integer value) {
-            addCriterion("warn_count >", value, "warnCount");
+        public Criteria andAdStatusGreaterThan(Integer value) {
+            addCriterion("ad_status >", value, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("warn_count >=", value, "warnCount");
+        public Criteria andAdStatusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("ad_status >=", value, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountLessThan(Integer value) {
-            addCriterion("warn_count <", value, "warnCount");
+        public Criteria andAdStatusLessThan(Integer value) {
+            addCriterion("ad_status <", value, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountLessThanOrEqualTo(Integer value) {
-            addCriterion("warn_count <=", value, "warnCount");
+        public Criteria andAdStatusLessThanOrEqualTo(Integer value) {
+            addCriterion("ad_status <=", value, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountIn(List<Integer> values) {
-            addCriterion("warn_count in", values, "warnCount");
+        public Criteria andAdStatusIn(List<Integer> values) {
+            addCriterion("ad_status in", values, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountNotIn(List<Integer> values) {
-            addCriterion("warn_count not in", values, "warnCount");
+        public Criteria andAdStatusNotIn(List<Integer> values) {
+            addCriterion("ad_status not in", values, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountBetween(Integer value1, Integer value2) {
-            addCriterion("warn_count between", value1, value2, "warnCount");
+        public Criteria andAdStatusBetween(Integer value1, Integer value2) {
+            addCriterion("ad_status between", value1, value2, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andWarnCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("warn_count not between", value1, value2, "warnCount");
+        public Criteria andAdStatusNotBetween(Integer value1, Integer value2) {
+            addCriterion("ad_status not between", value1, value2, "adStatus");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextIsNull() {
-            addCriterion("illegal_context is null");
+        public Criteria andThirdPartyAdIsNull() {
+            addCriterion("third_party_ad is null");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextIsNotNull() {
-            addCriterion("illegal_context is not null");
+        public Criteria andThirdPartyAdIsNotNull() {
+            addCriterion("third_party_ad is not null");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextEqualTo(String value) {
-            addCriterion("illegal_context =", value, "illegalContext");
+        public Criteria andThirdPartyAdEqualTo(String value) {
+            addCriterion("third_party_ad =", value, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextNotEqualTo(String value) {
-            addCriterion("illegal_context <>", value, "illegalContext");
+        public Criteria andThirdPartyAdNotEqualTo(String value) {
+            addCriterion("third_party_ad <>", value, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextGreaterThan(String value) {
-            addCriterion("illegal_context >", value, "illegalContext");
+        public Criteria andThirdPartyAdGreaterThan(String value) {
+            addCriterion("third_party_ad >", value, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextGreaterThanOrEqualTo(String value) {
-            addCriterion("illegal_context >=", value, "illegalContext");
+        public Criteria andThirdPartyAdGreaterThanOrEqualTo(String value) {
+            addCriterion("third_party_ad >=", value, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextLessThan(String value) {
-            addCriterion("illegal_context <", value, "illegalContext");
+        public Criteria andThirdPartyAdLessThan(String value) {
+            addCriterion("third_party_ad <", value, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextLessThanOrEqualTo(String value) {
-            addCriterion("illegal_context <=", value, "illegalContext");
+        public Criteria andThirdPartyAdLessThanOrEqualTo(String value) {
+            addCriterion("third_party_ad <=", value, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextLike(String value) {
-            addCriterion("illegal_context like", value, "illegalContext");
+        public Criteria andThirdPartyAdLike(String value) {
+            addCriterion("third_party_ad like", value, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextNotLike(String value) {
-            addCriterion("illegal_context not like", value, "illegalContext");
+        public Criteria andThirdPartyAdNotLike(String value) {
+            addCriterion("third_party_ad not like", value, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextIn(List<String> values) {
-            addCriterion("illegal_context in", values, "illegalContext");
+        public Criteria andThirdPartyAdIn(List<String> values) {
+            addCriterion("third_party_ad in", values, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextNotIn(List<String> values) {
-            addCriterion("illegal_context not in", values, "illegalContext");
+        public Criteria andThirdPartyAdNotIn(List<String> values) {
+            addCriterion("third_party_ad not in", values, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextBetween(String value1, String value2) {
-            addCriterion("illegal_context between", value1, value2, "illegalContext");
+        public Criteria andThirdPartyAdBetween(String value1, String value2) {
+            addCriterion("third_party_ad between", value1, value2, "thirdPartyAd");
             return (Criteria) this;
         }
 
-        public Criteria andIllegalContextNotBetween(String value1, String value2) {
-            addCriterion("illegal_context not between", value1, value2, "illegalContext");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountIsNull() {
-            addCriterion("illegal_count is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountIsNotNull() {
-            addCriterion("illegal_count is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountEqualTo(Integer value) {
-            addCriterion("illegal_count =", value, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountNotEqualTo(Integer value) {
-            addCriterion("illegal_count <>", value, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountGreaterThan(Integer value) {
-            addCriterion("illegal_count >", value, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountGreaterThanOrEqualTo(Integer value) {
-            addCriterion("illegal_count >=", value, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountLessThan(Integer value) {
-            addCriterion("illegal_count <", value, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountLessThanOrEqualTo(Integer value) {
-            addCriterion("illegal_count <=", value, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountIn(List<Integer> values) {
-            addCriterion("illegal_count in", values, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountNotIn(List<Integer> values) {
-            addCriterion("illegal_count not in", values, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountBetween(Integer value1, Integer value2) {
-            addCriterion("illegal_count between", value1, value2, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andIllegalCountNotBetween(Integer value1, Integer value2) {
-            addCriterion("illegal_count not between", value1, value2, "illegalCount");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationIsNull() {
-            addCriterion("operation is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationIsNotNull() {
-            addCriterion("operation is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationEqualTo(Byte value) {
-            addCriterion("operation =", value, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationNotEqualTo(Byte value) {
-            addCriterion("operation <>", value, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationGreaterThan(Byte value) {
-            addCriterion("operation >", value, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationGreaterThanOrEqualTo(Byte value) {
-            addCriterion("operation >=", value, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationLessThan(Byte value) {
-            addCriterion("operation <", value, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationLessThanOrEqualTo(Byte value) {
-            addCriterion("operation <=", value, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationIn(List<Byte> values) {
-            addCriterion("operation in", values, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationNotIn(List<Byte> values) {
-            addCriterion("operation not in", values, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationBetween(Byte value1, Byte value2) {
-            addCriterion("operation between", value1, value2, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperationNotBetween(Byte value1, Byte value2) {
-            addCriterion("operation not between", value1, value2, "operation");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorIsNull() {
-            addCriterion("operator is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorIsNotNull() {
-            addCriterion("operator is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorEqualTo(String value) {
-            addCriterion("operator =", value, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorNotEqualTo(String value) {
-            addCriterion("operator <>", value, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorGreaterThan(String value) {
-            addCriterion("operator >", value, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorGreaterThanOrEqualTo(String value) {
-            addCriterion("operator >=", value, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorLessThan(String value) {
-            addCriterion("operator <", value, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorLessThanOrEqualTo(String value) {
-            addCriterion("operator <=", value, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorLike(String value) {
-            addCriterion("operator like", value, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorNotLike(String value) {
-            addCriterion("operator not like", value, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorIn(List<String> values) {
-            addCriterion("operator in", values, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorNotIn(List<String> values) {
-            addCriterion("operator not in", values, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorBetween(String value1, String value2) {
-            addCriterion("operator between", value1, value2, "operator");
-            return (Criteria) this;
-        }
-
-        public Criteria andOperatorNotBetween(String value1, String value2) {
-            addCriterion("operator not between", value1, value2, "operator");
+        public Criteria andThirdPartyAdNotBetween(String value1, String value2) {
+            addCriterion("third_party_ad not between", value1, value2, "thirdPartyAd");
             return (Criteria) this;
         }
 

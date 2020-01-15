@@ -16,7 +16,7 @@ public interface PmsConnectionAreaService {
     /**
      * 分页查询人脉商圈列表记录
      *
-     * @param pmsConnectionArea 人脉商圈列表对象
+     * @param pmsConnectionArea 人脉商圈对象
      * @return
      */
     List<PmsConnectionArea> queryPmsConnectionArea(PmsConnectionArea pmsConnectionArea, Integer pageNum, Integer pageSize);
@@ -24,15 +24,17 @@ public interface PmsConnectionAreaService {
     /**
      * 删除内容
      *
-     * @param id 人脉商圈列表对象id
+     * @param id 人脉商圈对象id
      * @return
      */
     CommonResult delIllegalText(Integer id);
 
+    CommonResult warn(String userAccount);
+
     /**
      * 封号
      *
-     * @param id 人脉商圈列表对象id
+     * @param id 人脉商圈对象id
      * @return
      */
     CommonResult closeAccount(Integer id);

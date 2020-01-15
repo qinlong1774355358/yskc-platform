@@ -18,5 +18,7 @@
 
 	<dubbo:reference registry="pms-service" interface="com.zscat.core.server.PmsConnectionAreaService" id="pmsConnectionAreaService" check="false" />
 
+	<dubbo:reference registry="pms-service" interface="com.zscat.core.server.PmsFriendCircleService" id="pmsFriendCircleService" check="false" />
+
 
 </beans>

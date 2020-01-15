@@ -22,4 +22,8 @@
 
 	<dubbo:service registry="pms-service"  interface="com.zscat.core.server.PmsConnectionAreaService"
 				   ref="pmsConnectionAreaService"  loadbalance="leastactive" retries="1" executes="1500" timeout="30000"/>
+
+	<dubbo:service registry="pms-service"  interface="com.zscat.core.server.PmsFriendCircleService"
+				   ref="pmsFriendCircleService"  loadbalance="leastactive" retries="1" executes="1500" timeout="30000"/>
+
 </beans>

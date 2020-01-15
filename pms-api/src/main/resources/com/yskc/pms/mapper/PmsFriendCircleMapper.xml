@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.yskc.pms.mapper.PmsConnectionAreaMapper" >
-  <resultMap id="BaseResultMap" type="com.yskc.pms.entity.PmsConnectionArea" >
+<mapper namespace="com.yskc.pms.mapper.PmsFriendCircleMapper" >
+  <resultMap id="BaseResultMap" type="com.yskc.pms.entity.PmsFriendCircle" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_account" property="userAccount" jdbcType="VARCHAR" />
-    <result column="illegal" property="illegal" jdbcType="TINYINT" />
-    <result column="warn_count" property="warnCount" jdbcType="INTEGER" />
-    <result column="illegal_context" property="illegalContext" jdbcType="VARCHAR" />
-    <result column="illegal_count" property="illegalCount" jdbcType="INTEGER" />
-    <result column="operation" property="operation" jdbcType="TINYINT" />
-    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="publish_type" property="publishType" jdbcType="INTEGER" />
+    <result column="ad_status" property="adStatus" jdbcType="INTEGER" />
+    <result column="third_party_ad" property="thirdPartyAd" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
@@ -72,16 +69,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, user_account, illegal, warn_count, illegal_context, illegal_count, operation, 
-    operator, create_time, update_time
+    id, user_account, publish_type, ad_status, third_party_ad, create_time, update_time
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yskc.pms.entity.PmsConnectionAreaExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.yskc.pms.entity.PmsFriendCircleExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from pms_connection_area
+    from pms_friend_circle
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -92,31 +88,29 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from pms_connection_area
+    from pms_friend_circle
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from pms_connection_area
+    delete from pms_friend_circle
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.yskc.pms.entity.PmsConnectionAreaExample" >
-    delete from pms_connection_area
+  <delete id="deleteByExample" parameterType="com.yskc.pms.entity.PmsFriendCircleExample" >
+    delete from pms_friend_circle
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.yskc.pms.entity.PmsConnectionArea" >
-    insert into pms_connection_area (id, user_account, illegal, 
-      warn_count, illegal_context, illegal_count, 
-      operation, operator, create_time, 
+  <insert id="insert" parameterType="com.yskc.pms.entity.PmsFriendCircle" >
+    insert into pms_friend_circle (id, user_account, publish_type, 
+      ad_status, third_party_ad, create_time, 
       update_time)
-    values (#{id,jdbcType=INTEGER}, #{userAccount,jdbcType=VARCHAR}, #{illegal,jdbcType=TINYINT}, 
-      #{warnCount,jdbcType=INTEGER}, #{illegalContext,jdbcType=VARCHAR}, #{illegalCount,jdbcType=INTEGER}, 
-      #{operation,jdbcType=TINYINT}, #{operator,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+    values (#{id,jdbcType=INTEGER}, #{userAccount,jdbcType=VARCHAR}, #{publishType,jdbcType=INTEGER}, 
+      #{adStatus,jdbcType=INTEGER}, #{thirdPartyAd,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.yskc.pms.entity.PmsConnectionArea" >
-    insert into pms_connection_area
+  <insert id="insertSelective" parameterType="com.yskc.pms.entity.PmsFriendCircle" >
+    insert into pms_friend_circle
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -124,23 +118,14 @@
       <if test="userAccount != null" >
         user_account,
       </if>
-      <if test="illegal != null" >
-        illegal,
+      <if test="publishType != null" >
+        publish_type,
       </if>
-      <if test="warnCount != null" >
-        warn_count,
+      <if test="adStatus != null" >
+        ad_status,
       </if>
-      <if test="illegalContext != null" >
-        illegal_context,
-      </if>
-      <if test="illegalCount != null" >
-        illegal_count,
-      </if>
-      <if test="operation != null" >
-        operation,
-      </if>
-      <if test="operator != null" >
-        operator,
+      <if test="thirdPartyAd != null" >
+        third_party_ad,
       </if>
       <if test="createTime != null" >
         create_time,
@@ -156,23 +141,14 @@
       <if test="userAccount != null" >
         #{userAccount,jdbcType=VARCHAR},
       </if>
-      <if test="illegal != null" >
-        #{illegal,jdbcType=TINYINT},
+      <if test="publishType != null" >
+        #{publishType,jdbcType=INTEGER},
       </if>
-      <if test="warnCount != null" >
-        #{warnCount,jdbcType=INTEGER},
+      <if test="adStatus != null" >
+        #{adStatus,jdbcType=INTEGER},
       </if>
-      <if test="illegalContext != null" >
-        #{illegalContext,jdbcType=VARCHAR},
-      </if>
-      <if test="illegalCount != null" >
-        #{illegalCount,jdbcType=INTEGER},
-      </if>
-      <if test="operation != null" >
-        #{operation,jdbcType=TINYINT},
-      </if>
-      <if test="operator != null" >
-        #{operator,jdbcType=VARCHAR},
+      <if test="thirdPartyAd != null" >
+        #{thirdPartyAd,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null" >
         #{createTime,jdbcType=TIMESTAMP},
@@ -182,14 +158,14 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.yskc.pms.entity.PmsConnectionAreaExample" resultType="java.lang.Integer" >
-    select count(*) from pms_connection_area
+  <select id="countByExample" parameterType="com.yskc.pms.entity.PmsFriendCircleExample" resultType="java.lang.Integer" >
+    select count(*) from pms_friend_circle
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update pms_connection_area
+    update pms_friend_circle
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
@@ -197,23 +173,14 @@
       <if test="record.userAccount != null" >
         user_account = #{record.userAccount,jdbcType=VARCHAR},
       </if>
-      <if test="record.illegal != null" >
-        illegal = #{record.illegal,jdbcType=TINYINT},
+      <if test="record.publishType != null" >
+        publish_type = #{record.publishType,jdbcType=INTEGER},
       </if>
-      <if test="record.warnCount != null" >
-        warn_count = #{record.warnCount,jdbcType=INTEGER},
+      <if test="record.adStatus != null" >
+        ad_status = #{record.adStatus,jdbcType=INTEGER},
       </if>
-      <if test="record.illegalContext != null" >
-        illegal_context = #{record.illegalContext,jdbcType=VARCHAR},
-      </if>
-      <if test="record.illegalCount != null" >
-        illegal_count = #{record.illegalCount,jdbcType=INTEGER},
-      </if>
-      <if test="record.operation != null" >
-        operation = #{record.operation,jdbcType=TINYINT},
-      </if>
-      <if test="record.operator != null" >
-        operator = #{record.operator,jdbcType=VARCHAR},
+      <if test="record.thirdPartyAd != null" >
+        third_party_ad = #{record.thirdPartyAd,jdbcType=VARCHAR},
       </if>
       <if test="record.createTime != null" >
         create_time = #{record.createTime,jdbcType=TIMESTAMP},
@@ -227,44 +194,32 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update pms_connection_area
+    update pms_friend_circle
     set id = #{record.id,jdbcType=INTEGER},
       user_account = #{record.userAccount,jdbcType=VARCHAR},
-      illegal = #{record.illegal,jdbcType=TINYINT},
-      warn_count = #{record.warnCount,jdbcType=INTEGER},
-      illegal_context = #{record.illegalContext,jdbcType=VARCHAR},
-      illegal_count = #{record.illegalCount,jdbcType=INTEGER},
-      operation = #{record.operation,jdbcType=TINYINT},
-      operator = #{record.operator,jdbcType=VARCHAR},
+      publish_type = #{record.publishType,jdbcType=INTEGER},
+      ad_status = #{record.adStatus,jdbcType=INTEGER},
+      third_party_ad = #{record.thirdPartyAd,jdbcType=VARCHAR},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.yskc.pms.entity.PmsConnectionArea" >
-    update pms_connection_area
+  <update id="updateByPrimaryKeySelective" parameterType="com.yskc.pms.entity.PmsFriendCircle" >
+    update pms_friend_circle
     <set >
       <if test="userAccount != null" >
         user_account = #{userAccount,jdbcType=VARCHAR},
       </if>
-      <if test="illegal != null" >
-        illegal = #{illegal,jdbcType=TINYINT},
+      <if test="publishType != null" >
+        publish_type = #{publishType,jdbcType=INTEGER},
       </if>
-      <if test="warnCount != null" >
-        warn_count = #{warnCount,jdbcType=INTEGER},
+      <if test="adStatus != null" >
+        ad_status = #{adStatus,jdbcType=INTEGER},
       </if>
-      <if test="illegalContext != null" >
-        illegal_context = #{illegalContext,jdbcType=VARCHAR},
-      </if>
-      <if test="illegalCount != null" >
-        illegal_count = #{illegalCount,jdbcType=INTEGER},
-      </if>
-      <if test="operation != null" >
-        operation = #{operation,jdbcType=TINYINT},
-      </if>
-      <if test="operator != null" >
-        operator = #{operator,jdbcType=VARCHAR},
+      <if test="thirdPartyAd != null" >
+        third_party_ad = #{thirdPartyAd,jdbcType=VARCHAR},
       </if>
       <if test="createTime != null" >
         create_time = #{createTime,jdbcType=TIMESTAMP},
@@ -275,15 +230,12 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.yskc.pms.entity.PmsConnectionArea" >
-    update pms_connection_area
+  <update id="updateByPrimaryKey" parameterType="com.yskc.pms.entity.PmsFriendCircle" >
+    update pms_friend_circle
     set user_account = #{userAccount,jdbcType=VARCHAR},
-      illegal = #{illegal,jdbcType=TINYINT},
-      warn_count = #{warnCount,jdbcType=INTEGER},
-      illegal_context = #{illegalContext,jdbcType=VARCHAR},
-      illegal_count = #{illegalCount,jdbcType=INTEGER},
-      operation = #{operation,jdbcType=TINYINT},
-      operator = #{operator,jdbcType=VARCHAR},
+      publish_type = #{publishType,jdbcType=INTEGER},
+      ad_status = #{adStatus,jdbcType=INTEGER},
+      third_party_ad = #{thirdPartyAd,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}

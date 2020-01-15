@@ -2,9 +2,8 @@ package com.yskc.pms.mapper;
 
 import com.yskc.pms.entity.PmsConnectionArea;
 import com.yskc.pms.entity.PmsConnectionAreaExample;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface PmsConnectionAreaMapper {
     int countByExample(PmsConnectionAreaExample example);
