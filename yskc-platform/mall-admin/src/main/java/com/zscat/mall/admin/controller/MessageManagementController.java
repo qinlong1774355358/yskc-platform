@@ -71,7 +71,7 @@ public class MessageManagementController {
      * @return
      */
     @GetMapping("/selectHistoryPushList")
-    public CommonResult selectHistoryPushList(PmsHistoryPush pmsHistoryPush,  String offsets,String pageSizes){
+    public CommonResult selectHistoryPushList(PmsHistoryPush pmsHistoryPush, String offsets, String pageSizes){
         int pageNo = 1;
         int pageSize = 10;
         //分页查询
@@ -83,6 +83,7 @@ public class MessageManagementController {
             pageSize=Integer.parseInt(pageSizes);
         }
         List<PmsHistoryPush> pmsPmsHistoryPushList = pmsMessageManagementService.queryPmsHistoryPushList(pmsHistoryPush, pageNo,pageSize);
+        System.out.println(pmsPmsHistoryPushList);
         CommonResult result = new CommonResult();
         return result.success(pmsPmsHistoryPushList);
     }

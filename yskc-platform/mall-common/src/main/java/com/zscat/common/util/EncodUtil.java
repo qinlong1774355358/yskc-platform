@@ -3,6 +3,8 @@ package com.zscat.common.util;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import sun.misc.BASE64Encoder;
 /**
@@ -27,6 +29,19 @@ public class EncodUtil {
 		    String newstr=base64en.encode(md5.digest(str.getBytes("utf-8")));
 		    return newstr;
 		  }
+	/**
+	 *动态toke编码生成器
+	 * @return
+	 * @throws NoSuchAlgorithmException
+	 * @throws UnsupportedEncodingException
+	 */
+	 public static String TokeByMd5() throws NoSuchAlgorithmException, UnsupportedEncodingException{
+		 //toke个人信息编码
+		 SimpleDateFormat tokeSimpleDateFormat = new SimpleDateFormat("YYYYMMDDHHmmssSS");
+		 String toke = tokeSimpleDateFormat.format(new Date());
+		 return EncodUtil.EncoderByMd5(toke);
+	 }
+
 		 public static void main(String[] args) {
 			try {
 				System.out.println(EncodUtil.EncoderByMd5("123456"));

@@ -14,12 +14,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     platform: mysql
-    url: jdbc:mysql://114.246.8.55:3306/db_mall_ekuai?serverTimezone=UTC
+    url:  jdbc:mysql://192.168.0.9:3306/db_mall_ekuai?serverTimezone=UTC
     username: root
     password: p@ssW0RD
-    #url: jdbc:mysql://127.0.0.1:3306/db_mall_ekuai?serverTimezone=UTC
-    #username: root
-    #password: 123456
     druid:
       initial-size: 1
       max-active: 20

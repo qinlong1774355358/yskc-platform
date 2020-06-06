@@ -13,8 +13,11 @@
 
 	<!-- pms提供服务接口 -->
 	<dubbo:reference registry="pms-service" interface="com.zscat.core.server.PmsChatService" id="pmsChatService" check="false" />
+	<dubbo:reference registry="pms-service" interface="com.zscat.core.server.PmsRegisterService" id="pmsRegisterService" check="false" />
 	<dubbo:reference registry="pms-service" interface="com.zscat.core.server.PmsVideoService" id="pmsVideoService" check="false" />
 	<dubbo:reference registry="pms-service" interface="com.zscat.core.server.PmsMessageManagementService" id="pmsMessageManagementService" check="false" />
+	<dubbo:reference registry="pms-service" interface="com.zscat.core.server.PmsConnectionBusinessService" id="pmsConnectionBusinessService" check="false" />
+	<dubbo:reference registry="pms-service" interface="com.zscat.core.server.PmsFinancialService" id="pmsFinancialService" check="false" />
 
 
 </beans>

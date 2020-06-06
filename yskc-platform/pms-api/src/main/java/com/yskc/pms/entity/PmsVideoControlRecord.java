@@ -1,7 +1,6 @@
 package com.yskc.pms.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,7 +13,7 @@ public class PmsVideoControlRecord implements Serializable {
     private Integer videoIllegal;
 
     private Integer videoViolations;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date accountAoolyTime;
 
     private Integer videoState;

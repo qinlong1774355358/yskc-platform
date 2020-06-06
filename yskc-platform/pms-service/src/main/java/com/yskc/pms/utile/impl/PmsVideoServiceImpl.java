@@ -18,28 +18,56 @@ import java.util.List;
 @Service("pmsVideoService")
 public class PmsVideoServiceImpl implements PmsVideoService {
 
+    /**
+     * 后台视频控制记录表
+     */
     @Autowired
     private PmsVideoControlRecordMapper pmsVideoControlRecordMapper;
+
+    /**
+     * 后台视频播放表
+     */
+    @Autowired
+    private PmsVoidePlayMapper pmsVoidePlayMapper;
+    /**
+     * 后台直播记录表
+     */
     @Autowired
     private PmsLiveRecordMapper pmsLiveRecordMapper;
+
+    /**
+     * 后台录播记录表
+     */
     @Autowired
     private PmsRecordedRecordMapper pmsRecordedRecordMapper;
+
+    /**
+     * 后台插播记录表
+     */
     @Autowired
     private PmsBreakingRecordsMapper pmsBreakingRecordsMapper;
+
+    /**
+     * 后台点播记录表
+     */
     @Autowired
     private PmsDemandRecordsMapper pmsDemandRecordsMapper;
 
     /**
-     * 分页查询视频播放列表记录
-     * @param pmsVideoControlRecord 视频列表对象
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 视频列表
+     * @param pmsVideoControlRecord
+     * @param startRow
+     * @param pageSize
      * @return
      */
     @Override
-    public List<PmsVideoControlRecord> queryPmsVideoControlRecord(PmsVideoControlRecord pmsVideoControlRecord,int startRow, int pageSize) {
+    public List<PmsVideoControlRecord> queryPmsVideoControlRecord(PmsVideoControlRecord pmsVideoControlRecord,int startRow,int pageSize) {
+        System.out.println("PmsVideoControlRecord=="+pmsVideoControlRecord);
+        System.out.println("pageSize=="+pageSize);
+        System.out.println("startRow=="+startRow);
         PmsVideoControlRecordExample example = new PmsVideoControlRecordExample();
         PmsVideoControlRecordExample.Criteria criteria = example.createCriteria();
+        /*criteria.andUserAccountEqualTo(pmsVideoControlRecord.getUserAccount());*/
         criteria.andUserAccountLike("%"+pmsVideoControlRecord.getUserAccount()+"%");
         example.setPageSize(pageSize);
         example.setStartRow(startRow);
@@ -47,14 +75,36 @@ public class PmsVideoServiceImpl implements PmsVideoService {
     }
 
     /**
-     *  分页查询直播列表记录
-     * @param pmsLiveRecord 直播视频播放
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 视频播放列表
+     * @param pmsVoidePlay
+     * @param startRow
+     * @param pageSize
+     * @return
+     */
+    @Override
+    public List<PmsVoidePlay> queryPmsVoidePlay(PmsVoidePlay pmsVoidePlay, int startRow, int pageSize) {
+        System.out.println("pmsVoidePlay=="+pmsVoidePlay);
+        System.out.println("pageSize=="+pageSize);
+        System.out.println("startRow=="+startRow);
+        PmsVoidePlayExample example = new PmsVoidePlayExample();
+        PmsVoidePlayExample.Criteria criteria = example.createCriteria();
+        criteria.andUserAccountLike("%"+pmsVoidePlay.getUserAccount()+"%");
+        example.setPageSize(pageSize);
+        example.setStartRow(startRow);
+        return pmsVoidePlayMapper.selectByExample(example);
+    }
+    /**
+     * 视频直播列表
+     * @param pmsLiveRecord
+     * @param startRow
+     * @param pageSize
      * @return
      */
     @Override
     public List<PmsLiveRecord> queryPmsLiveRecord(PmsLiveRecord pmsLiveRecord, int startRow, int pageSize) {
+        System.out.println("pmsLiveRecord=="+pmsLiveRecord);
+        System.out.println("pageSize=="+pageSize);
+        System.out.println("startRow=="+startRow);
         PmsLiveRecordExample example = new PmsLiveRecordExample();
         PmsLiveRecordExample.Criteria criteria = example.createCriteria();
         criteria.andUserAccountLike("%"+pmsLiveRecord.getUserAccount()+"%");
@@ -64,14 +114,17 @@ public class PmsVideoServiceImpl implements PmsVideoService {
     }
 
     /**
-     * 分页查询录播列表记录
-     * @param pmsRecordedRecord 录播视频播放
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 视频录播列表
+     * @param pmsRecordedRecord
+     * @param startRow
+     * @param pageSize
      * @return
      */
     @Override
     public List<PmsRecordedRecord> queryPmsRecordedRecord(PmsRecordedRecord pmsRecordedRecord, int startRow, int pageSize) {
+        System.out.println("pmsRecordedRecord=="+pmsRecordedRecord);
+        System.out.println("pageSize=="+pageSize);
+        System.out.println("startRow=="+startRow);
         PmsRecordedRecordExample example = new PmsRecordedRecordExample();
         PmsRecordedRecordExample.Criteria criteria = example.createCriteria();
         criteria.andUserAccountLike("%"+pmsRecordedRecord.getUserAccount()+"%");
@@ -79,16 +132,18 @@ public class PmsVideoServiceImpl implements PmsVideoService {
         example.setStartRow(startRow);
         return pmsRecordedRecordMapper.selectByExample(example);
     }
-
     /**
-     * 分页查询插播列表记录
-     * @param pmsBreakingRecords 插播视频播放
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 视频录播列表
+     * @param pmsBreakingRecords
+     * @param startRow
+     * @param pageSize
      * @return
      */
     @Override
     public List<PmsBreakingRecords> queryPmsBreakingRecords(PmsBreakingRecords pmsBreakingRecords, int startRow, int pageSize) {
+        System.out.println("pmsBreakingRecords=="+pmsBreakingRecords);
+        System.out.println("pageSize=="+pageSize);
+        System.out.println("startRow=="+startRow);
         PmsBreakingRecordsExample example = new PmsBreakingRecordsExample();
         PmsBreakingRecordsExample.Criteria criteria = example.createCriteria();
         criteria.andUserAccountLike("%"+pmsBreakingRecords.getUserAccount()+"%");
@@ -96,16 +151,18 @@ public class PmsVideoServiceImpl implements PmsVideoService {
         example.setStartRow(startRow);
         return pmsBreakingRecordsMapper.selectByExample(example);
     }
-
     /**
-     * 分页查询点播列表记录
-     * @param pmsDemandRecords 点播视频播放
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 视频录播列表
+     * @param pmsDemandRecords
+     * @param startRow
+     * @param pageSize
      * @return
      */
     @Override
     public List<PmsDemandRecords> queryPmsDemandRecords(PmsDemandRecords pmsDemandRecords, int startRow, int pageSize) {
+        System.out.println("pmsDemandRecords=="+pmsDemandRecords);
+        System.out.println("pageSize=="+pageSize);
+        System.out.println("startRow=="+startRow);
         PmsDemandRecordsExample example = new PmsDemandRecordsExample();
         PmsDemandRecordsExample.Criteria criteria = example.createCriteria();
         criteria.andUserAccountLike("%"+pmsDemandRecords.getUserAccount()+"%");
@@ -113,25 +170,4 @@ public class PmsVideoServiceImpl implements PmsVideoService {
         example.setStartRow(startRow);
         return pmsDemandRecordsMapper.selectByExample(example);
     }
-//    @Override
-//    public boolean update(PmsStoreMerchant pmsStoreMerchant) {
-//       return pmsStoreMerchantMapper.updateByPrimaryKey(pmsStoreMerchant) > 0;
-//    }
-//
-//    @Override
-//    public boolean save(PmsStoreMerchant pmsStoreMerchant) {
-//        return pmsStoreMerchantMapper.insert(pmsStoreMerchant) > 0;
-//    }
-//
-//    @Override
-//    public boolean del(int id) {
-//        PmsStoreMerchant pmsStoreMerchant = pmsStoreMerchantMapper.selectByPrimaryKey(id);
-//        if (null != pmsStoreMerchant){
-//            Integer enable = pmsStoreMerchant.getEnable();
-//            enable = 0 == enable? 1 : 0;
-//            pmsStoreMerchant.setEnable(enable);
-//            return pmsStoreMerchantMapper.updateByPrimaryKey(pmsStoreMerchant) > 0;
-//        }
-//        return false;
-//    }
 }

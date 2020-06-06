@@ -7,7 +7,7 @@
     <result column="address" property="address" jdbcType="VARCHAR" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.yskc.pms.entity.PmsOutsideEvenLink" extends="BaseResultMap" >
-    <result column="details" property="details" jdbcType="LONGVARCHAR" />
+    <result column="description" property="description" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -71,7 +71,7 @@
     id, name, address
   </sql>
   <sql id="Blob_Column_List" >
-    details
+    description
   </sql>
   <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.yskc.pms.entity.PmsOutsideEvenLinkExample" >
     select
@@ -98,6 +98,8 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
     from pms_outside_even_link
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -129,9 +131,9 @@
   </delete>
   <insert id="insert" parameterType="com.yskc.pms.entity.PmsOutsideEvenLink" >
     insert into pms_outside_even_link (id, name, address, 
-      details)
+      description)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
-      #{details,jdbcType=LONGVARCHAR})
+      #{description,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.yskc.pms.entity.PmsOutsideEvenLink" >
     insert into pms_outside_even_link
@@ -145,8 +147,8 @@
       <if test="address != null" >
         address,
       </if>
-      <if test="details != null" >
-        details,
+      <if test="description != null" >
+        description,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -159,8 +161,8 @@
       <if test="address != null" >
         #{address,jdbcType=VARCHAR},
       </if>
-      <if test="details != null" >
-        #{details,jdbcType=LONGVARCHAR}
+      <if test="description != null" >
+        #{description,jdbcType=LONGVARCHAR}
       </if>
     </trim>
   </insert>
@@ -182,8 +184,8 @@
       <if test="record.address != null" >
         address = #{record.address,jdbcType=VARCHAR},
       </if>
-      <if test="record.details != null" >
-        details = #{record.details,jdbcType=LONGVARCHAR},
+      <if test="record.description != null" >
+        description = #{record.description,jdbcType=LONGVARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -195,7 +197,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
       address = #{record.address,jdbcType=VARCHAR},
-      details = #{record.details,jdbcType=LONGVARCHAR}
+      description = #{record.description,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -218,8 +220,8 @@
       <if test="address != null" >
         address = #{address,jdbcType=VARCHAR},
       </if>
-      <if test="details != null" >
-        details = #{details,jdbcType=LONGVARCHAR},
+      <if test="description != null" >
+        description = #{description,jdbcType=LONGVARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -228,7 +230,7 @@
     update pms_outside_even_link
     set name = #{name,jdbcType=VARCHAR},
       address = #{address,jdbcType=VARCHAR},
-      details = #{details,jdbcType=LONGVARCHAR}
+      description = #{description,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.yskc.pms.entity.PmsOutsideEvenLink" >

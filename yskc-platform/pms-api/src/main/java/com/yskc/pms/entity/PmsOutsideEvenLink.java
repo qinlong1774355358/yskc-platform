@@ -9,7 +9,7 @@ public class PmsOutsideEvenLink implements Serializable {
 
     private String address;
 
-    private String details;
+    private String description;
 
     private static final long serialVersionUID = 1L;
 
@@ -37,12 +37,12 @@ public class PmsOutsideEvenLink implements Serializable {
         this.address = address;
     }
 
-    public String getdetails() {
-        return details;
+    public String getDescription() {
+        return description;
     }
 
-    public void setdetails(String details) {
-        this.details = details;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class PmsOutsideEvenLink implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", address=").append(address);
-        sb.append(", details=").append(details);
+        sb.append(", description=").append(description);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

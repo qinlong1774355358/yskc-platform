@@ -27,53 +27,37 @@ public class PmsChatServiceImpl implements PmsChatService {
 	private PmsChatRecordMapper pmsChatRecordMapper;
 
     /**
-     * 聊天控制记录查询
-     * @param pmsChatControlRecord 后台聊天控制记录表对象
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 功能：聊天列表
      * @return
      */
     @Override
-    public List<PmsChatControlRecord> queryPmsChatControlRecord(PmsChatControlRecord pmsChatControlRecord,int startRow, int pageSize) {
+    public List<PmsChatControlRecord> queryPmsChatControlRecord() {
         PmsChatControlRecordExample example = new PmsChatControlRecordExample();
-        PmsChatControlRecordExample.Criteria criteria = example.createCriteria();
-        criteria.andUserAccountLike("%"+pmsChatControlRecord.getUserAccount()+"%");
-        example.setPageSize(pageSize);
-        example.setStartRow(startRow);
+//        PmsChatControlRecordExample.Criteria criteria = example.createCriteria();
+//        example.setOrderByClause("age asc");
+//        example.setDistinct(false);
+//        criteria.andUserAccountEqualTo(account);
         return pmsChatControlRecordMapper.selectByExample(example);
     }
 
     /**
-     * 查询群管理列表
-     * @param pmsGroupManagement 后台群管理表对象
-     * @param startRow 页数
-     * @param pageSize 条数
-     * @return
-     */
+    * 姓名：张古良
+    * 查询群管理列表
+    */
     @Override
-    public List<PmsGroupManagement> queryHotPmsGroupManagement(PmsGroupManagement pmsGroupManagement,int startRow, int pageSize) {
+    public List<PmsGroupManagement> queryHotPmsGroupManagement() {
         PmsGroupManagementExample example = new PmsGroupManagementExample();
-        PmsGroupManagementExample.Criteria criteria = example.createCriteria();
-        criteria.andGroupAccountLike("%"+pmsGroupManagement.getGroupAccount()+"%");
-        example.setPageSize(pageSize);
-        example.setStartRow(startRow);
         return pmsGroupManagementMapper.selectByExample(example);
     }
 
-    /**
-     * 聊天记录查询
-     * @param pmsChatRecord 后台聊天记录表对象
-     * @param startRow 页数
-     * @param pageSize 条数
-     * @return
-     */
+   /**
+    * 姓名：张古良
+    * 聊天记录查询
+    * 修改时间：2019.7.14
+    */
 	@Override
-	public List<PmsChatRecord> queryHotPmsChatRecord(PmsChatRecord pmsChatRecord,int startRow, int pageSize) {
+	public List<PmsChatRecord> queryHotPmsChatRecord() {
         PmsChatRecordExample example = new PmsChatRecordExample();
-        PmsChatRecordExample.Criteria criteria = example.createCriteria();
-        criteria.andChatAccountLike("%"+pmsChatRecord.getChatAccount()+"%");
-        example.setPageSize(pageSize);
-        example.setStartRow(startRow);
 		return pmsChatRecordMapper.selectByExample(example);
 	}
 //	/**

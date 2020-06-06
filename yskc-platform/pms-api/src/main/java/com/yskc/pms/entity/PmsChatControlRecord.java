@@ -1,7 +1,5 @@
 package com.yskc.pms.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -13,7 +11,7 @@ public class PmsChatControlRecord implements Serializable {
     private Integer chatIllegal;
 
     private Integer chatViolations;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+
     private Date accountApplyTime;
 
     private Integer chatState;

@@ -35,6 +35,8 @@ public class PmsMessageManagementServiceImpl implements PmsMessageManagementServ
         PmsOutsideEvenLinkExample example = new PmsOutsideEvenLinkExample();
         example.setPageSize(pageSize);
         example.setStartRow(startRow);
+        System.out.println(example.getStartRow());
+        System.out.println(example.getPageSize());
         return pmsOutsideEvenLinkMapper.selectByExample(example);
     }
     /**
@@ -45,7 +47,6 @@ public class PmsMessageManagementServiceImpl implements PmsMessageManagementServ
     @Override
     public boolean savePmsOutsideEvenLink(PmsOutsideEvenLink pmsOutsideEvenLink) {
        int size = pmsOutsideEvenLinkMapper.insertSelective(pmsOutsideEvenLink);
-        System.out.println(size);
        if(size>0){
            return true;
        }
@@ -62,6 +63,7 @@ public class PmsMessageManagementServiceImpl implements PmsMessageManagementServ
     @Override
     public List<PmsHistoryPush> queryPmsHistoryPushList(PmsHistoryPush pmsHistoryPush, int startRow, int pageSize) {
         PmsHistoryPushExample example = new PmsHistoryPushExample();
+        System.out.println(example);
         example.setPageSize(pageSize);
         example.setStartRow(startRow);
         return pmsHistoryPushMapper.selectByExample(example);
@@ -74,7 +76,6 @@ public class PmsMessageManagementServiceImpl implements PmsMessageManagementServ
     @Override
     public boolean savePmsHistoryPush(PmsHistoryPush pmsHistoryPush) {
         int size = pmsHistoryPushMapper.insertSelective(pmsHistoryPush);
-        System.out.println(size);
         if (size>0){
             return true;
         }

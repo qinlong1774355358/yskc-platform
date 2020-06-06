@@ -26,7 +26,7 @@ public class VideoController {
     private PmsVideoService pmsVideoService;
 
 	/**
-	 * 功能：聊天列表状态
+	 * 功能：视频列表
 	 * @param pmsVideoControlRecord 后台视频控制记录表
 	 * @param offsets 页数
 	 * @param pageSizes 数量
@@ -37,18 +37,47 @@ public class VideoController {
 		if(null==pmsVideoControlRecord.getUserAccount()){
 			pmsVideoControlRecord.setUserAccount("");
 		}
-    	int pageNo = 1;
-        int pageSize=10;
-    	//分页查询
-    	if(StringUtils.isNumeric(offsets)) {
+		int pageNo = 1;
+		int pageSize = 10;
+		//分页查询
+		if(StringUtils.isNumeric(offsets)) {
 			pageNo=Integer.parseInt(offsets);
-    	}
-    	//数量
-    	if(StringUtils.isNumeric(pageSizes)){
+		}
+		//条数
+		if(StringUtils.isNumeric(pageSizes)){
 			pageSize=Integer.parseInt(pageSizes);
 		}
     	List<PmsVideoControlRecord> list=  pmsVideoService.queryPmsVideoControlRecord(pmsVideoControlRecord,pageNo,pageSize);
-		CommonResult result = new CommonResult();
+		System.out.println("list=="+list);
+    	CommonResult result = new CommonResult();
+        return result.success(list);
+    }
+
+    /**
+	 * 功能：视频播放
+	 * @param pmsVoidePlay 后台视频播放记录表
+	 * @param offsets 页数
+	 * @param pageSizes 数量
+	 * @return
+	 */
+	@GetMapping(value = "/selectVoidePlay")
+    public CommonResult selectVoidePlay(PmsVoidePlay pmsVoidePlay, String offsets,String pageSizes){
+		if(null==pmsVoidePlay.getUserAccount()){
+			pmsVoidePlay.setUserAccount("");
+		}
+		int pageNo = 1;
+		int pageSize = 10;
+		//分页查询
+		if(StringUtils.isNumeric(offsets)) {
+			pageNo=Integer.parseInt(offsets);
+		}
+		//条数
+		if(StringUtils.isNumeric(pageSizes)){
+			pageSize=Integer.parseInt(pageSizes);
+		}
+    	List<PmsVoidePlay> list=  pmsVideoService.queryPmsVoidePlay(pmsVoidePlay,pageNo,pageSize);
+		System.out.println("list=="+list);
+    	CommonResult result = new CommonResult();
         return result.success(list);
     }
 
@@ -78,6 +107,7 @@ public class VideoController {
 		 CommonResult result = new CommonResult();
     	 return result.success(list);
      }
+
      /**
 	 * 功能：录播查询列表
 	 * @param pmsRecordedRecord 直播记录
@@ -104,6 +134,7 @@ public class VideoController {
 		 CommonResult result = new CommonResult();
     	 return result.success(list);
      }
+
      /**
 	 * 功能：插播查询列表
 	 * @param pmsBreakingRecords 插播记录
@@ -130,6 +161,7 @@ public class VideoController {
 		 CommonResult result = new CommonResult();
     	 return result.success(list);
      }
+
      /**
 	 * 功能：点播查询列表
 	 * @param pmsDemandRecords 点播记录

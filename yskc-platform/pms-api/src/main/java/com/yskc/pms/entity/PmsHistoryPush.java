@@ -15,7 +15,8 @@ public class PmsHistoryPush implements Serializable {
 
     private String messageContent;
 
-    private static final long serialVersionUID = 1L;
+    private static long F1L;
+    private static final long serialVersionUID = F1L;
 
     public Long getId() {
         return id;

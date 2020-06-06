@@ -1,5 +1,7 @@
 package com.zscat.core.server;
 
+
+
 import com.yskc.pms.entity.PmsChatControlRecord;
 import com.yskc.pms.entity.PmsChatRecord;
 import com.yskc.pms.entity.PmsGroupManagement;
@@ -16,30 +18,23 @@ public interface PmsChatService {
 
     /**
      * 聊天控制记录查询
-     * @param pmsChatControlRecord 后台聊天控制记录表对象
-     * @param startRow 页数
-     * @param pageSize 条数
      * @return
      */
-    List<PmsChatControlRecord> queryPmsChatControlRecord(PmsChatControlRecord pmsChatControlRecord,int startRow, int pageSize);
+    List<PmsChatControlRecord> queryPmsChatControlRecord();
 
     /**
+     * 姓名:张古良
      * 查询群管理列表
-     * @param pmsGroupManagement 后台群管理表对象
-     * @param startRow 页数
-     * @param pageSize 条数
      * @return
      */
-    List<PmsGroupManagement> queryHotPmsGroupManagement(PmsGroupManagement pmsGroupManagement, int startRow, int pageSize);
+    List<PmsGroupManagement> queryHotPmsGroupManagement();
 
     /**
+     * 姓名：张古良
      * 聊天记录查询
-     * @param pmsChatRecord 后台聊天记录表对象
-     * @param startRow 页数
-     * @param pageSize 条数
-     * @return
+     * @return 所有聊天记录
      */
-    List<PmsChatRecord> queryHotPmsChatRecord(PmsChatRecord pmsChatRecord,int startRow, int pageSize);
+    List<PmsChatRecord> queryHotPmsChatRecord();
 
 //    /**
 //     * 姓名：张古良

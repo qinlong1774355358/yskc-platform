@@ -1,9 +1,11 @@
 package com.zscat.core.server;
 
+
 import com.yskc.pms.entity.PmsHistoryPush;
 import com.yskc.pms.entity.PmsOutsideEvenLink;
 
 import java.util.List;
+
 /**
  * @ClassName: PmsMessageManagementService
  * @Description: 消息管理业务功能
@@ -18,7 +20,7 @@ public interface PmsMessageManagementService {
      * @param startRow 显示页数
      * @return
      */
-    List<PmsOutsideEvenLink> queryPmsOutsideEvenLinkList(PmsOutsideEvenLink pmsOutsideEvenLink,int startRow,int pageSize);
+    List<PmsOutsideEvenLink> queryPmsOutsideEvenLinkList(PmsOutsideEvenLink pmsOutsideEvenLink, int startRow, int pageSize);
 
     /**
      * 外链链接表添加

@@ -2,8 +2,9 @@ package com.yskc.pms.mapper;
 
 import com.yskc.pms.entity.PmsVideoControlRecord;
 import com.yskc.pms.entity.PmsVideoControlRecordExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface PmsVideoControlRecordMapper {
     int countByExample(PmsVideoControlRecordExample example);

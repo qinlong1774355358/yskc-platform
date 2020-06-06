@@ -22,15 +22,34 @@
     <!-- mybatis 的mapper接口生成的包路径-->
     <javaClientGenerator targetPackage="com.yskc.pms.mapper" targetProject="src/main/java" type="XMLMAPPER" />
     <!-- 配置生成表的模型-->
-<!--    <table tableName="pms_chat_control_record" domainObjectName="PmsChatControlRecord"/>-->
+
+      <!--<table tableName="pms_chat_control_record" domainObjectName="PmsChatControlRecord"/>-->
+
 <!--    <table tableName="pms_group_management" domainObjectName="PmsGroupManagement"/>-->
-<!--    <table tableName="pms_chat_record" domainObjectName="PmsChatRecord"/>-->
-<!--    <table tableName="pms_video_control_record" domainObjectName="PmsVideoControlRecord"/>-->
+   <!-- <table tableName="pms_chat_record" domainObjectName="PmsChatRecord"/>-->
+    <!--<table tableName="pms_video_control_record" domainObjectName="PmsVideoControlRecord"/>-->
 <!--    <table tableName="pms_outside_even_link" domainObjectName="PmsOutsideEvenLink"/>-->
-<!--    <table tableName="pms_history_push" domainObjectName="PmsHistoryPush"/>-->
+    <!--<table tableName="pms_history_push" domainObjectName="PmsHistoryPush"/>-->
 <!--    <table tableName="pms_live_record" domainObjectName="PmsLiveRecord"/>-->
 <!--    <table tableName="pms_recorded_record" domainObjectName="PmsRecordedRecord"/>-->
-    <table tableName="pms_breaking_records" domainObjectName="PmsBreakingRecords"/>
-    <table tableName="pms_demand_records" domainObjectName="PmsDemandRecords"/>
+    <!--<table tableName="pms_breaking_records" domainObjectName="PmsBreakingRecords"/>-->
+      <!--<table tableName="pms_demand_records" domainObjectName="PmsDemandRecords"/>-->
+    <!--<table tableName="pms_register" domainObjectName="PmsRegister"/>-->
+      <!--<table tableName="pms_login" domainObjectName="Pmslogin"/>-->
+      <!--<table tableName="pms_admin" domainObjectName="PmsAdmin"/>-->
+     <!-- <table tableName="pms_voide_play" domainObjectName="PmsVoidePlay"/>-->
+      <!--<table tableName="pms_connection_area" domainObjectName="PmsConnectionArea"/>-->
+      <!--<table tableName="pms_trade_area" domainObjectName="PmsTradeArea"/>-->
+      <!--<table tableName="pms_friend_circle" domainObjectName="PmsFriendCircle"/>-->
+      <!--<table tableName="pms_financial_management" domainObjectName="PmsFinancialManagement"/>-->
+      <!--<table tableName="pms_red_packet" domainObjectName="PmsRedPacket"/>-->
+      <!--<table tableName="pms_get_red_package" domainObjectName="PmsGetRedPackage"/>-->
+      <!--<table tableName="pms_wallet_management" domainObjectName="PmsWalletManagement"/>
+      <table tableName="pms_recharge_record" domainObjectName="PmsRechargeRecord"/>
+      <table tableName="pms_withdraw_record" domainObjectName="PmsWithdrawRecord"/>
+      <table tableName="pms_income_records" domainObjectName="PmsIncomeRecords"/>-->
+     <!-- <table tableName="pms_support_record" domainObjectName="PmsSupportRecord"/>-->
+      <table tableName="pms_withdraw_check_management" domainObjectName="PmsWithdrawCheckManagement"/>
+      <table tableName="pms_withdraw_deposit_record" domainObjectName="PmsWithdrawDepositRecord"/>
   </context>
 </generatorConfiguration>

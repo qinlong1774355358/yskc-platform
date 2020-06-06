@@ -14,54 +14,44 @@ import java.util.List;
 public interface PmsVideoService {
 
     /**
-     * 分页查询视频播放列表记录
-     * @param pmsVideoControlRecord 视频列表对象
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 查询视频列表状态
+     * @param pmsVideoControlRecord
      * @return
      */
-    List<PmsVideoControlRecord> queryPmsVideoControlRecord(PmsVideoControlRecord pmsVideoControlRecord,int startRow, int pageSize);
+    List<PmsVideoControlRecord> queryPmsVideoControlRecord(PmsVideoControlRecord pmsVideoControlRecord, int pageSize, int startRow);
 
     /**
-     * 分页查询直播列表记录
-     * @param pmsLiveRecord 直播视频播放
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 查询视频播放列表状态
+     * @param pmsVoidePlay
      * @return
      */
-    List<PmsLiveRecord> queryPmsLiveRecord(PmsLiveRecord pmsLiveRecord, int startRow, int pageSize);
+    List<PmsVoidePlay> queryPmsVoidePlay(PmsVoidePlay pmsVoidePlay, int pageSize, int startRow);
 
     /**
-     *  分页查询录播列表记录
-     * @param pmsRecordedRecord 录播视频播放
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 查询视频直播列表状态
+     * @param pmsLiveRecord
      * @return
      */
-    List<PmsRecordedRecord> queryPmsRecordedRecord(PmsRecordedRecord pmsRecordedRecord,int startRow, int pageSize);
+    List<PmsLiveRecord> queryPmsLiveRecord(PmsLiveRecord pmsLiveRecord, int pageSize, int startRow);
 
     /**
-     * 分页查询插播列表记录
-     * @param pmsBreakingRecords 插播视频播放
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 查询视频录播列表状态
+     * @param pmsRecordedRecord
      * @return
      */
-    List<PmsBreakingRecords> queryPmsBreakingRecords(PmsBreakingRecords pmsBreakingRecords, int startRow, int pageSize);
+    List<PmsRecordedRecord> queryPmsRecordedRecord(PmsRecordedRecord pmsRecordedRecord, int pageSize, int startRow);
 
     /**
-     * 分页查询点播列表记录
-     * @param pmsDemandRecords 点播视频播放
-     * @param startRow 页数
-     * @param pageSize 条数
+     * 查询视频插播列表状态
+     * @param pmsBreakingRecords
      * @return
      */
-    List<PmsDemandRecords> queryPmsDemandRecords(PmsDemandRecords pmsDemandRecords, int startRow, int pageSize);
+    List<PmsBreakingRecords> queryPmsBreakingRecords(PmsBreakingRecords pmsBreakingRecords, int pageSize, int startRow);
 
-//    /**
-//     * 删除店铺
-//     * @param id
-//     * @return
-//     */
-//    boolean del(int id);
+    /**
+     * 查询视频点播列表状态
+     * @param pmsDemandRecords
+     * @return
+     */
+    List<PmsDemandRecords> queryPmsDemandRecords(PmsDemandRecords pmsDemandRecords, int pageSize, int startRow);
 }

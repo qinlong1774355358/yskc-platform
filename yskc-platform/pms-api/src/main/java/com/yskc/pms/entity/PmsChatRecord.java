@@ -1,8 +1,5 @@
 package com.yskc.pms.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,7 +13,7 @@ public class PmsChatRecord implements Serializable {
     private String chatPicturePath;
 
     private String connectionLocation;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:ss")
+
     private Date recordTime;
 
     private static final long serialVersionUID = 1L;

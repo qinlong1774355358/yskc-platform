@@ -1,14 +1,7 @@
 package com.zscat.mall.admin.controller;
 
 
-import com.yskc.pms.entity.PmsChatControlRecord;
-import com.yskc.pms.entity.PmsChatRecord;
-import com.yskc.pms.entity.PmsGroupManagement;
-import com.zscat.common.result.CommonResult;
-import com.zscat.core.server.PmsChatService;
 import com.zscat.mall.admin.validator.SCaptchaValidator;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * @ClassName: ChatController
@@ -46,4 +38,5 @@ public class LoginController {
 		//向页面输出验证码图片
 		instance.write(response.getOutputStream());
     }
+
 }
